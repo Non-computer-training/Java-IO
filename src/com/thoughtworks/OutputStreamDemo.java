@@ -8,10 +8,10 @@ public class OutputStreamDemo {
     File outputFile = new File("src/com/thoughtworks/file/output.txt");
     try (InputStream inputStream = new FileInputStream(inputFile);
          OutputStream outputStream = new FileOutputStream(outputFile)) {
-      byte[] data = new byte[1024];
-      int length;
-      while ((length = inputStream.read(data)) != -1) {
-        outputStream.write(data, 0, length);
+      int length = inputStream.available();
+      byte[] data = new byte[length];
+      while (inputStream.read(data) != -1) {
+        outputStream.write(data);
       }
     } catch (Exception e) {
       e.printStackTrace();
