@@ -4,8 +4,8 @@ import java.io.*;
 
 public class OutputStreamDemo {
   public static void main(String[] args) {
-    File inputFile = new File("/Users/huanhuan.ma/test/test/Java-IO/src/com/thoughtworks/file/input.txt");
-    File outputFile = new File("/Users/huanhuan.ma/test/test/Java-IO/src/com/thoughtworks/file/output.txt");
+    File inputFile = new File("src/com/thoughtworks/file/input.txt");
+    File outputFile = new File("src/com/thoughtworks/file/output.txt");
     try (InputStream inputStream = new FileInputStream(inputFile);
          OutputStream outputStream = new FileOutputStream(outputFile)) {
       byte[] data = new byte[1024];

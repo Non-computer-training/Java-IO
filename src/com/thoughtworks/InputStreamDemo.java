@@ -6,7 +6,7 @@ import java.io.InputStream;
 
 public class InputStreamDemo {
   public static void main(String[] args) {
-    File file = new File("/Users/huanhuan.ma/test/test/Java-IO/src/com/thoughtworks/file/input.txt");
+    File file = new File("src/com/thoughtworks/file/input.txt");
     try (InputStream inputStream = new FileInputStream(file)) {
       byte[] data = new byte[1024];
       int length;

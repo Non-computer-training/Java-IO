@@ -6,7 +6,7 @@ import java.io.Reader;
 
 public class ReaderDemo {
   public static void main(String[] args) {
-    File file = new File("/Users/huanhuan.ma/test/test/Java-IO/src/com/thoughtworks/file/input.txt");
+    File file = new File("src/com/thoughtworks/file/input.txt");
     try (Reader reader = new FileReader(file)) {
       char[] data = new char[1024];
       int length;
